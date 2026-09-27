@@ -2,6 +2,8 @@ import { useCallback, useRef, useState } from 'react'
 import { PeekCard, SwipeCard, type SwipeCardHandle, type SwipeDir } from '../components/SwipeCard'
 import type { CategoryId } from '../data/categories'
 import { fitsMode, pickNext } from '../lib/recommend'
+import { LikeBurst } from '../components/LikeBurst'
+import { nextBurstKind, type BurstKind } from '../lib/burst'
 import { NoteDialog } from '../components/NoteDialog'
 import type { FeedbackMap, NotesMap } from '../lib/storage'
 import type { Feedback, Mode, Question } from '../types'
@@ -31,6 +33,20 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
   const [history, setHistory] = useState<HistoryEntry[]>([])
   const [noteOpen, setNoteOpen] = useState(false)
   const closeNote = useCallback(() => setNoteOpen(false), [])
+  const [burst, setBurst] = useState<{ id: number; kind: BurstKind } | null>(null)
+  const burstTimer = useRef<number>(0)
+
+  const celebrate = () => {
+    try {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    } catch {
+      // ignore
+    }
+    const id = Date.now()
+    setBurst({ id, kind: nextBurstKind() })
+    window.clearTimeout(burstTimer.current)
+    burstTimer.current = window.setTimeout(() => setBurst(null), 1600)
+  }
 
   const pick = (fb: FeedbackMap) => {
     const q = pickNext({ questions, feedback: fb, mode, categories, sessionSeen, shuffle })
@@ -57,6 +73,7 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
       },
     }
     updateFeedback(() => nextFeedback)
+    if (dir === 'left') celebrate()
     setHistory((h) => [...h.slice(-19), { question: q, prev }])
     setCount((c) => c + 1)
     setDeck({ current: deck.next, next: deck.next ? pick(nextFeedback) : null })
@@ -135,6 +152,7 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
             </button>
           </div>
         )}
+        {burst && <LikeBurst key={burst.id} kind={burst.kind} />}
       </div>
 
       {noteOpen && deck.current && (
