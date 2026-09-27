@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { categoriesForMode } from '../data/categories'
 import { fitsMode } from '../lib/recommend'
 import type { FeedbackMap } from '../lib/storage'
@@ -11,6 +12,10 @@ interface Props {
   onStart: () => void
   onLiked: () => void
   onReset: () => void
+  /** Shown under the logo */
+  top?: ReactNode
+  /** Shown under the categories */
+  more?: ReactNode
 }
 
 const MODES: { id: Mode; label: string; emoji: string; sub: string }[] = [
@@ -18,7 +23,7 @@ const MODES: { id: Mode; label: string; emoji: string; sub: string }[] = [
   { id: 'friends', label: 'Friends', emoji: '🫶', sub: 'For your people' },
 ]
 
-export function Home({ questions, feedback, settings, onChange, onStart, onLiked, onReset }: Props) {
+export function Home({ questions, feedback, settings, onChange, onStart, onLiked, onReset, top, more }: Props) {
   const { mode } = settings
   const shuffle = !!settings.shuffle
   const cats = mode ? categoriesForMode(mode) : []
@@ -48,6 +53,8 @@ export function Home({ questions, feedback, settings, onChange, onStart, onLiked
         <h1>Bondfire</h1>
         <p>Questions that bring you closer.</p>
       </header>
+
+      {top}
 
       <section>
         <h2>Who's playing?</h2>
@@ -114,6 +121,8 @@ export function Home({ questions, feedback, settings, onChange, onStart, onLiked
           </div>
         </section>
       )}
+
+      {more}
 
       <div className="home-actions">
         <button className="primary" disabled={!mode || available === 0} onClick={onStart}>
