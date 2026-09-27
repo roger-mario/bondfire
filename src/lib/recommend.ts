@@ -10,9 +10,11 @@ import type { FeedbackMap } from './storage'
  * random "how much do they like this" value from a Beta(up + 1, down + 1)
  * distribution per category and per depth. Categories with lots of thumbs up
  * usually draw high, disliked ones usually draw low, and ones with few votes
- * draw anywhere, which keeps exploring them. Question-level history then
- * nudges the score: unseen questions come first, liked ones can return later,
- * disliked ones almost never come back.
+ * draw anywhere, which keeps exploring them.
+ *
+ * Questions that were already swiped never come back until the players choose
+ * "Start over", which clears that history but keeps the votes. After a start
+ * over, liked questions come back sooner and disliked ones last.
  */
 
 interface Tally {
@@ -74,7 +76,7 @@ export function pickNext({
 }: PickOptions): Question | null {
   const allowed = new Set(categories)
   const pool = questions.filter(
-    (q) => fitsMode(q, mode) && allowed.has(q.category) && !sessionSeen.has(q.id),
+    (q) => fitsMode(q, mode) && allowed.has(q.category) && !sessionSeen.has(q.id) && !feedback[q.id]?.seen,
   )
   if (pool.length === 0) return null
   if (shuffle) return pool[Math.floor(random() * pool.length)]
@@ -98,7 +100,6 @@ export function pickNext({
     let history = 1
     if (f?.vote === 'down') history = 0.03
     else if (f?.vote === 'up') history = 0.5
-    else if (f?.seen) history = 0.3
     const base = catDraw.get(q.category)! * Math.sqrt(depthDraw[q.depth]) * history
     return base * base
   })

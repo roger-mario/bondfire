@@ -35,9 +35,11 @@ export function Home({ questions, feedback, settings, onChange, onStart, onLiked
     onChange({ ...settings, shuffle: false, categories: [...next] })
   }
 
-  const available = mode
-    ? questions.filter((q) => fitsMode(q, mode) && (shuffle || selected.has(q.category))).length
-    : 0
+  const inSelection = mode
+    ? questions.filter((q) => fitsMode(q, mode) && (shuffle || selected.has(q.category)))
+    : []
+  const available = inSelection.length
+  const fresh = inSelection.filter((q) => !feedback[q.id]?.seen).length
 
   return (
     <main className="screen home">
@@ -115,7 +117,7 @@ export function Home({ questions, feedback, settings, onChange, onStart, onLiked
 
       <div className="home-actions">
         <button className="primary" disabled={!mode || available === 0} onClick={onStart}>
-          {mode ? (available ? `Start · ${available} questions` : 'Pick a category') : 'Pick who is playing'}
+          {mode ? (available ? (fresh ? `Start · ${fresh} new questions` : 'All played · Start over') : 'Pick a category') : 'Pick who is playing'}
         </button>
         <div className="row small">
           <button className="link" onClick={onLiked}>

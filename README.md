@@ -57,6 +57,6 @@ Each vote counts toward the question's **category** and its **depth**. For every
 - liked questions can come back later
 - disliked questions almost never come back
 
-A question is never repeated within the same session.
+A question you have already swiped (liked, disliked or skipped) never comes back, also in Random. Once everything in your selection has been played, "Start over" makes those questions available again while keeping your votes.
 
 When a shared database is added later (for example on Vercel), the same votes can be sent to the server to rank questions across all users.

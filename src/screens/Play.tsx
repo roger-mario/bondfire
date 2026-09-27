@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import { PeekCard, SwipeCard, type SwipeCardHandle, type SwipeDir } from '../components/SwipeCard'
 import type { CategoryId } from '../data/categories'
-import { pickNext } from '../lib/recommend'
+import { fitsMode, pickNext } from '../lib/recommend'
 import { NoteDialog } from '../components/NoteDialog'
 import type { FeedbackMap, NotesMap } from '../lib/storage'
 import type { Feedback, Mode, Question } from '../types'
@@ -78,11 +78,19 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
     setCount((c) => Math.max(0, c - 1))
   }
 
+  // Forget which questions in this selection were played (votes are kept).
   const restart = () => {
+    const allowed = new Set(categories)
+    const fresh: FeedbackMap = { ...feedback }
+    for (const q of questions) {
+      const f = fresh[q.id]
+      if (f?.seen && allowed.has(q.category) && fitsMode(q, mode)) fresh[q.id] = { ...f, seen: 0 }
+    }
+    updateFeedback(() => fresh)
     sessionSeen.clear()
     setHistory([])
-    const current = pick(feedback)
-    setDeck({ current, next: current ? pick(feedback) : null })
+    const current = pick(fresh)
+    setDeck({ current, next: current ? pick(fresh) : null })
   }
 
   const likedCount = Object.values(feedback).filter((f) => f.vote === 'up').length
@@ -117,10 +125,10 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
         ) : (
           <div className="empty">
             <div className="empty-emoji">🎉</div>
-            <h2>You've been through them all</h2>
-            <p>{shuffle ? 'Shuffle again for a fresh random order.' : 'Shuffle again and your favorite kinds of questions will come up first.'}</p>
+            <h2>You've played them all</h2>
+            <p>Every question in this selection has been swiped. Start over to play them again, or pick other categories.</p>
             <button className="primary" onClick={restart}>
-              Shuffle again
+              Start over
             </button>
             <button className="link" onClick={onBack}>
               Change categories
