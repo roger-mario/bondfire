@@ -11,6 +11,10 @@ export interface SwipeCardHandle {
 interface Props {
   question: Question
   onSwiped: (dir: SwipeDir) => void
+  onUndo: () => void
+  canUndo: boolean
+  onNote: () => void
+  hasNote: boolean
   ref?: Ref<SwipeCardHandle>
 }
 
@@ -18,7 +22,7 @@ const X_THRESHOLD = 90
 const Y_THRESHOLD = 110
 const EXIT_MS = 280
 
-export function SwipeCard({ question, onSwiped, ref }: Props) {
+export function SwipeCard({ question, onSwiped, onUndo, canUndo, onNote, hasNote, ref }: Props) {
   const cat = CATEGORY_BY_ID[question.category]
   const [offset, setOffset] = useState({ x: 0, y: 0 })
   const [dragging, setDragging] = useState(false)
@@ -71,10 +75,12 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
   const skip = Math.min(1, Math.max(0, -offset.y / Y_THRESHOLD)) * (1 - Math.max(like, nope))
 
   // Tapping a hint counts as a swipe; stop the card from starting a drag.
-  const tap = (dir: SwipeDir) => ({
+  const press = (fn: () => void) => ({
     onPointerDown: (e: React.PointerEvent) => e.stopPropagation(),
-    onClick: () => exit(dir),
+    onClick: fn,
   })
+  const tap = (dir: SwipeDir) => press(() => exit(dir))
+  const fade = 1 - Math.max(like, nope, skip) * 0.8
 
   return (
     <div
@@ -109,9 +115,18 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
         >
           👍
         </button>
-        <span className="skip-hint" style={{ opacity: 0.5 + skip * 0.5 - Math.max(like, nope) * 0.5 }}>
-          {skip > 0.3 ? 'Skip' : '↑ skip'}
-        </span>
+        <div className="mid-actions" style={{ opacity: fade }}>
+          <button className="mini" aria-label="Undo last card" disabled={!canUndo} {...press(onUndo)}>
+            ↺
+          </button>
+          <button className="mini skip-btn" aria-label="Skip" {...tap('up')}>
+            ↑
+            <small>skip</small>
+          </button>
+          <button className={`mini ${hasNote ? 'has-note' : ''}`} aria-label={hasNote ? 'Edit note' : 'Add note'} {...press(onNote)}>
+            ✎
+          </button>
+        </div>
         <button
           className="vote"
           aria-label="Thumbs down"

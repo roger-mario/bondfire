@@ -2,6 +2,7 @@ import type { Feedback, Settings } from '../types'
 
 const FEEDBACK_KEY = 'bondfire:feedback:v1'
 const SETTINGS_KEY = 'bondfire:settings:v1'
+const NOTES_KEY = 'bondfire:notes:v1'
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -28,10 +29,20 @@ export const saveFeedback = (f: FeedbackMap) => write(FEEDBACK_KEY, f)
 export const loadSettings = () => read<Settings>(SETTINGS_KEY, { mode: null, categories: [] })
 export const saveSettings = (s: Settings) => write(SETTINGS_KEY, s)
 
+export interface Note {
+  text: string
+  updatedAt: number
+}
+export type NotesMap = Record<string, Note>
+
+export const loadNotes = () => read<NotesMap>(NOTES_KEY, {})
+export const saveNotes = (n: NotesMap) => write(NOTES_KEY, n)
+
 export function clearAll() {
   try {
     localStorage.removeItem(FEEDBACK_KEY)
     localStorage.removeItem(SETTINGS_KEY)
+    localStorage.removeItem(NOTES_KEY)
   } catch {
     // ignore
   }

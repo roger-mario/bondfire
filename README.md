@@ -5,7 +5,8 @@ A phone-first web app with conversation questions for couples and friends. Pick 
 - **Swipe left** (or tap 👍 on the card): more like this
 - **Swipe right** (or tap 👎 on the card): less like this
 - **Swipe up**: skip without voting
-- **Undo**: bring back the last card
+- **↺ Undo** (on the card): bring back the last card
+- **✎ Note** (on the card): write down what you both answered; notes are saved on the device and shown on the Liked & notes screen
 
 Pick **Random** to get questions from every category in a fully shuffled order, without the recommendations.
 

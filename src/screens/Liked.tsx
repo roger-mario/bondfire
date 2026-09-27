@@ -1,16 +1,26 @@
+import { useCallback, useState } from 'react'
+import { NoteDialog } from '../components/NoteDialog'
 import { CATEGORIES, CATEGORY_BY_ID } from '../data/categories'
 import { affinity, buildProfile } from '../lib/recommend'
-import type { FeedbackMap } from '../lib/storage'
+import type { FeedbackMap, NotesMap } from '../lib/storage'
 import type { Question, Vote } from '../types'
 
 interface Props {
   questions: Question[]
   feedback: FeedbackMap
   setVote: (id: string, vote: Vote | undefined) => void
+  notes: NotesMap
+  setNote: (id: string, text: string) => void
   onBack: () => void
 }
 
-export function Liked({ questions, feedback, setVote, onBack }: Props) {
+export function Liked({ questions, feedback, setVote, notes, setNote, onBack }: Props) {
+  const [editing, setEditing] = useState<Question | null>(null)
+  const closeNote = useCallback(() => setEditing(null), [])
+  const noted = questions
+    .filter((q) => notes[q.id] && feedback[q.id]?.vote !== 'up')
+    .sort((a, b) => notes[b.id].updatedAt - notes[a.id].updatedAt)
+
   const liked = questions
     .filter((q) => feedback[q.id]?.vote === 'up')
     .sort((a, b) => (feedback[b.id]?.lastSeen ?? 0) - (feedback[a.id]?.lastSeen ?? 0))
@@ -26,7 +36,7 @@ export function Liked({ questions, feedback, setVote, onBack }: Props) {
         <button className="icon" onClick={onBack} aria-label="Back">
           ‹
         </button>
-        <span className="counter">Liked questions</span>
+        <span className="counter">Liked & notes</span>
         <span className="icon" />
       </header>
 
@@ -63,13 +73,52 @@ export function Liked({ questions, feedback, setVote, onBack }: Props) {
                   {c.emoji} {c.label}
                 </span>
                 <p>{q.text}</p>
-                <button className="link muted" onClick={() => setVote(q.id, undefined)}>
-                  Remove
-                </button>
+                {notes[q.id] && <p className="note-text">✎ {notes[q.id].text}</p>}
+                <div className="liked-actions">
+                  <button className="link" onClick={() => setEditing(q)}>
+                    {notes[q.id] ? 'Edit note' : 'Add note'}
+                  </button>
+                  <button className="link muted" onClick={() => setVote(q.id, undefined)}>
+                    Remove
+                  </button>
+                </div>
               </li>
             )
           })}
         </ul>
+      )}
+      {noted.length > 0 && (
+        <section>
+          <h2>Other notes</h2>
+          <ul className="liked-list">
+            {noted.map((q) => {
+              const c = CATEGORY_BY_ID[q.category]
+              return (
+                <li key={q.id} style={{ borderLeftColor: c.colors[0] }}>
+                  <span className="liked-cat">
+                    {c.emoji} {c.label}
+                  </span>
+                  <p>{q.text}</p>
+                  <p className="note-text">✎ {notes[q.id].text}</p>
+                  <div className="liked-actions">
+                    <button className="link" onClick={() => setEditing(q)}>
+                      Edit note
+                    </button>
+                  </div>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+      )}
+
+      {editing && (
+        <NoteDialog
+          question={editing}
+          initial={notes[editing.id]?.text ?? ''}
+          onSave={(text) => setNote(editing.id, text)}
+          onClose={closeNote}
+        />
       )}
     </main>
   )

@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { PeekCard, SwipeCard, type SwipeCardHandle, type SwipeDir } from '../components/SwipeCard'
 import type { CategoryId } from '../data/categories'
 import { pickNext } from '../lib/recommend'
-import type { FeedbackMap } from '../lib/storage'
+import { NoteDialog } from '../components/NoteDialog'
+import type { FeedbackMap, NotesMap } from '../lib/storage'
 import type { Feedback, Mode, Question } from '../types'
 
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
   categories: CategoryId[]
   shuffle: boolean
   updateFeedback: (fn: (prev: FeedbackMap) => FeedbackMap) => void
+  notes: NotesMap
+  setNote: (id: string, text: string) => void
   onBack: () => void
   onLiked: () => void
 }
@@ -21,11 +24,13 @@ interface HistoryEntry {
   prev: Feedback | undefined
 }
 
-export function Play({ questions, feedback, mode, categories, shuffle, updateFeedback, onBack, onLiked }: Props) {
+export function Play({ questions, feedback, mode, categories, shuffle, updateFeedback, notes, setNote, onBack, onLiked }: Props) {
   // Mutable set of ids shown this session; kept stable across renders.
   const [sessionSeen] = useState(() => new Set<string>())
   const cardRef = useRef<SwipeCardHandle>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [noteOpen, setNoteOpen] = useState(false)
+  const closeNote = useCallback(() => setNoteOpen(false), [])
 
   const pick = (fb: FeedbackMap) => {
     const q = pickNext({ questions, feedback: fb, mode, categories, sessionSeen, shuffle })
@@ -98,7 +103,16 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
         {deck.current ? (
           <>
             {deck.next && <PeekCard key={`peek-${deck.next.id}`} question={deck.next} />}
-            <SwipeCard key={deck.current.id} ref={cardRef} question={deck.current} onSwiped={handleSwiped} />
+            <SwipeCard
+              key={deck.current.id}
+              ref={cardRef}
+              question={deck.current}
+              onSwiped={handleSwiped}
+              onUndo={undo}
+              canUndo={history.length > 0}
+              onNote={() => setNoteOpen(true)}
+              hasNote={!!notes[deck.current.id]}
+            />
           </>
         ) : (
           <div className="empty">
@@ -115,11 +129,14 @@ export function Play({ questions, feedback, mode, categories, shuffle, updateFee
         )}
       </div>
 
-      <footer className="controls">
-        <button className="link muted" onClick={undo} disabled={history.length === 0}>
-          ↺ Undo
-        </button>
-      </footer>
+      {noteOpen && deck.current && (
+        <NoteDialog
+          question={deck.current}
+          initial={notes[deck.current.id]?.text ?? ''}
+          onSave={(text) => setNote(deck.current!.id, text)}
+          onClose={closeNote}
+        />
+      )}
     </main>
   )
 }
