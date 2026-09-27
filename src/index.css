@@ -356,7 +356,54 @@ h2 {
   text-wrap: balance;
 }
 
+.tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.tint-like {
+  background: linear-gradient(270deg, var(--like), transparent 70%);
+}
+
+.tint-nope {
+  background: linear-gradient(90deg, var(--nope), transparent 70%);
+}
+
+.stamp {
+  position: absolute;
+  top: 72px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 1.3rem;
+  border: 3px solid #fff;
+  background: rgba(0, 0, 0, 0.22);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.stamp-like {
+  right: 20px;
+  transform: rotate(12deg);
+  border-color: var(--like);
+}
+
+.stamp-nope {
+  left: 20px;
+  transform: rotate(-12deg);
+  border-color: var(--nope);
+}
+
+.stamp-skip {
+  left: 50%;
+  bottom: 96px;
+  top: auto;
+  transform: translateX(-50%);
+}
+
 .card-actions {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

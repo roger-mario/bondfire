@@ -94,6 +94,12 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
       </span>
       <p className="card-text">{question.text}</p>
 
+      <div className="tint tint-like" style={{ opacity: like * 0.35 }} />
+      <div className="tint tint-nope" style={{ opacity: nope * 0.35 }} />
+      <div className="stamp stamp-like" style={{ opacity: like }}>👍 Like</div>
+      <div className="stamp stamp-nope" style={{ opacity: nope }}>👎 Pass</div>
+      <div className="stamp stamp-skip" style={{ opacity: skip }}>Skip</div>
+
       <div className="card-actions">
         <button
           className="vote"
