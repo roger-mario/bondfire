@@ -52,7 +52,7 @@ export function Liked({ questions, feedback, setVote, onBack }: Props) {
       )}
 
       {liked.length === 0 ? (
-        <p className="empty-text">No liked questions yet. Swipe right or tap 👍 on the ones you love, and they'll be saved here.</p>
+        <p className="empty-text">No liked questions yet. Swipe left or tap 👍 on the ones you love, and they'll be saved here.</p>
       ) : (
         <ul className="liked-list">
           {liked.map((q) => {

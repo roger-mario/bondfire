@@ -65,8 +65,9 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
   }
 
   const rotate = offset.x / 18
-  const likeOpacity = Math.min(1, Math.max(0, offset.x / X_THRESHOLD))
-  const nopeOpacity = Math.min(1, Math.max(0, -offset.x / X_THRESHOLD))
+  // Swipe left = thumbs up, swipe right = thumbs down.
+  const likeOpacity = Math.min(1, Math.max(0, -offset.x / X_THRESHOLD))
+  const nopeOpacity = Math.min(1, Math.max(0, offset.x / X_THRESHOLD))
   const skipOpacity = Math.min(1, Math.max(0, -offset.y / Y_THRESHOLD)) * (1 - Math.max(likeOpacity, nopeOpacity))
 
   return (
@@ -95,8 +96,8 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
       <p className="card-text">{question.text}</p>
       <div className="card-hint">Take turns answering</div>
 
-      <div className="stamp stamp-like" style={{ opacity: likeOpacity }}>👍 More like this</div>
-      <div className="stamp stamp-nope" style={{ opacity: nopeOpacity }}>👎 Less like this</div>
+      <div className="stamp stamp-like" style={{ opacity: likeOpacity }}>👍 Like</div>
+      <div className="stamp stamp-nope" style={{ opacity: nopeOpacity }}>👎 Pass</div>
       <div className="stamp stamp-skip" style={{ opacity: skipOpacity }}>Skip</div>
     </div>
   )

@@ -2,8 +2,8 @@
 
 A phone-first web app with conversation questions for couples and friends. Pick who's playing and which categories you're in the mood for, then swipe through question cards:
 
-- **Swipe right / 👍**: more like this
-- **Swipe left / 👎**: less like this
+- **Swipe left / 👍**: more like this
+- **Swipe right / 👎**: less like this
 - **Swipe up / ⤼**: skip without voting
 - **↺**: undo the last swipe
 

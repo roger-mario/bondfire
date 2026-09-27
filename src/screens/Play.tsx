@@ -58,7 +58,7 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
       [q.id]: {
         seen: (prev?.seen ?? 0) + 1,
         lastSeen: Date.now(),
-        vote: dir === 'right' ? 'up' : dir === 'left' ? 'down' : prev?.vote,
+        vote: dir === 'left' ? 'up' : dir === 'right' ? 'down' : prev?.vote,
       },
     }
     updateFeedback(() => nextFeedback)
@@ -119,7 +119,7 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
             <SwipeCard key={deck.current.id} ref={cardRef} question={deck.current} onSwiped={handleSwiped} />
             {showHint && (
               <div className="hint" aria-hidden>
-                <span>👎 ← swipe →  👍</span>
+                <span>👍 ← swipe →  👎</span>
                 <span>swipe up to skip</span>
               </div>
             )}
@@ -143,14 +143,14 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
         <button className="ctrl small" onClick={undo} disabled={history.length === 0} aria-label="Undo">
           ↺
         </button>
-        <button className="ctrl nope" onClick={() => cardRef.current?.swipe('left')} disabled={!deck.current} aria-label="Thumbs down">
-          👎
+        <button className="ctrl like" onClick={() => cardRef.current?.swipe('left')} disabled={!deck.current} aria-label="Thumbs up">
+          👍
         </button>
         <button className="ctrl skip" onClick={() => cardRef.current?.swipe('up')} disabled={!deck.current} aria-label="Skip">
           ⤼
         </button>
-        <button className="ctrl like" onClick={() => cardRef.current?.swipe('right')} disabled={!deck.current} aria-label="Thumbs up">
-          👍
+        <button className="ctrl nope" onClick={() => cardRef.current?.swipe('right')} disabled={!deck.current} aria-label="Thumbs down">
+          👎
         </button>
       </footer>
     </main>

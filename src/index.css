@@ -383,14 +383,16 @@ h2 {
 }
 
 .stamp-like {
-  left: 20px;
-  transform: rotate(-12deg);
+  right: 20px;
+  transform: rotate(12deg);
+  white-space: nowrap;
   border-color: var(--like);
 }
 
 .stamp-nope {
-  right: 20px;
-  transform: rotate(12deg);
+  left: 20px;
+  transform: rotate(-12deg);
+  white-space: nowrap;
   border-color: var(--nope);
 }
 
