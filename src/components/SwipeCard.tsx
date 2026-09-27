@@ -70,6 +70,7 @@ export function SwipeCard({ question, onSwiped, onUndo, canUndo, onNote, hasNote
 
   const rotate = offset.x / 18
   // Swipe left = thumbs up, swipe right = thumbs down.
+  // The tap buttons sit the other way round: 👎 bottom left, 👍 bottom right.
   const like = Math.min(1, Math.max(0, -offset.x / X_THRESHOLD))
   const nope = Math.min(1, Math.max(0, offset.x / X_THRESHOLD))
   const skip = Math.min(1, Math.max(0, -offset.y / Y_THRESHOLD)) * (1 - Math.max(like, nope))
@@ -109,11 +110,11 @@ export function SwipeCard({ question, onSwiped, onUndo, canUndo, onNote, hasNote
       <div className="card-actions">
         <button
           className="vote"
-          aria-label="Thumbs up"
-          style={{ opacity: 0.75 + like * 0.25 - nope * 0.45, transform: `scale(${1 + like * 0.35})` }}
-          {...tap('left')}
+          aria-label="Thumbs down"
+          style={{ opacity: 0.75 + nope * 0.25 - like * 0.45, transform: `scale(${1 + nope * 0.35})` }}
+          {...tap('right')}
         >
-          👍
+          👎
         </button>
         <div className="mid-actions" style={{ opacity: fade }}>
           <button className="mini" aria-label="Undo last card" disabled={!canUndo} {...press(onUndo)}>
@@ -129,11 +130,11 @@ export function SwipeCard({ question, onSwiped, onUndo, canUndo, onNote, hasNote
         </div>
         <button
           className="vote"
-          aria-label="Thumbs down"
-          style={{ opacity: 0.75 + nope * 0.25 - like * 0.45, transform: `scale(${1 + nope * 0.35})` }}
-          {...tap('right')}
+          aria-label="Thumbs up"
+          style={{ opacity: 0.75 + like * 0.25 - nope * 0.45, transform: `scale(${1 + like * 0.35})` }}
+          {...tap('left')}
         >
-          👎
+          👍
         </button>
       </div>
     </div>
