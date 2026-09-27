@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "warmup-01",
+    "text": "What's a small thing that instantly makes your day better?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-02",
+    "text": "What's the best thing you've eaten this month?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-03",
+    "text": "What song have you had on repeat lately, and why that one?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-04",
+    "text": "If you could master any skill overnight, what would you pick?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-05",
+    "text": "What's your go-to comfort movie or show, and what makes it so comforting?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-06",
+    "text": "Morning person or night owl, and what does your ideal version of that time look like?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-07",
+    "text": "What's a hobby you've always wanted to try but haven't yet?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-08",
+    "text": "What's the most useless talent you have? Show it.",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-09",
+    "text": "What's your favorite way to spend a rainy Sunday?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-10",
+    "text": "Which app on your phone could you absolutely not live without?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-11",
+    "text": "What's a food you hated as a kid but love now?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-12",
+    "text": "What's the last thing that made you laugh out loud?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-13",
+    "text": "If your life had a theme song, what would it be?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-14",
+    "text": "What's your most controversial food opinion?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-15",
+    "text": "What's the best gift you've ever received, and who gave it to you?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-16",
+    "text": "Beach, mountains or city for a perfect weekend away?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-17",
+    "text": "What's a word or phrase you say way too often?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-18",
+    "text": "What's something you're weirdly good at?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-19",
+    "text": "What's the best compliment a stranger has ever given you?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-20",
+    "text": "Which season suits your personality best, and why?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-21",
+    "text": "What's your idea of a perfect breakfast?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-22",
+    "text": "What was the last thing you got really excited about?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-23",
+    "text": "What's one thing on your bucket list you could actually do this year?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-24",
+    "text": "If you could live in any fictional world for a week, which one would you pick?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-25",
+    "text": "What's a smell that instantly takes you somewhere else?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-26",
+    "text": "What's your favorite little ritual in your day?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-27",
+    "text": "What's the best purchase you've made for under 20 dollars?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-28",
+    "text": "What's a trend you secretly love?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "warmup-29",
+    "text": "What's something you've changed your mind about recently?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "warmup-30",
+    "text": "What would your perfect day off look like, from waking up to falling asleep?",
+    "category": "warmup",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-01",
+    "text": "If we were a comedy duo, what would our act be called?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-02",
+    "text": "You can only eat one cuisine for the rest of your life. Which one?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-03",
+    "text": "Would you rather be able to talk to animals or speak every human language?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-04",
+    "text": "If you were a kitchen appliance, which would you be and why?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-05",
+    "text": "What would your villain origin story be?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-06",
+    "text": "If you had to teach a class on anything, what would it be?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-07",
+    "text": "Would you rather relive the same day forever or skip a random year of your life?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-08",
+    "text": "If you woke up famous tomorrow, what would you most likely be famous for?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-09",
+    "text": "What's the most ridiculous thing you've ever googled?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-10",
+    "text": "What would you name a boat if you owned one?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-11",
+    "text": "If animals could talk, which one would be the rudest?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-12",
+    "text": "You get to add one law that everyone must follow. What is it?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-13",
+    "text": "Which actor would play you in a movie about your life, and what genre would it be?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-14",
+    "text": "What's the weirdest dream you still remember?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-15",
+    "text": "If you could swap lives with anyone for a day, who would it be?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-16",
+    "text": "Would you rather have a rewind button or a pause button for your life?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-17",
+    "text": "What's the worst possible superpower to have?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-18",
+    "text": "If you opened a restaurant, what would be on the menu?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-19",
+    "text": "You have one free day and 1,000 dollars that must be spent by midnight. What's the plan?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-20",
+    "text": "If you were a ghost, where would you haunt and who would you mess with?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-21",
+    "text": "Which conspiracy theory would you most like to be true?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-22",
+    "text": "Would you rather always be 10 minutes late or always 20 minutes early?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-23",
+    "text": "Which fictional character do you think I'm most like?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-24",
+    "text": "What's a sport that should exist but doesn't?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-25",
+    "text": "If you could only keep three apps on your phone, which ones stay?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-26",
+    "text": "Zombie apocalypse: what's your role in the group, and what's mine?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-27",
+    "text": "If you could instantly become an expert in something completely useless, what would it be?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-28",
+    "text": "What's the pettiest thing you've ever done?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-29",
+    "text": "If your pet (or dream pet) could text you, what would it say?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-30",
+    "text": "Would you rather explore deep space or the deep ocean?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-31",
+    "text": "What would the title of your autobiography be?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-32",
+    "text": "If you could make one household chore disappear forever, which one goes?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-33",
+    "text": "You can have dinner with any three people, dead or alive. Who's at the table?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "fun-34",
+    "text": "What's the most \"you\" thing you've ever done?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "fun-35",
+    "text": "What's a harmless rule you love breaking?",
+    "category": "fun",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-01",
+    "text": "What's your happiest childhood memory?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-02",
+    "text": "What did you want to be when you grew up, and how close did you get?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-03",
+    "text": "Who was your favorite teacher, and what made them so good?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-04",
+    "text": "What's the most trouble you ever got into as a kid?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-05",
+    "text": "What was your favorite toy or game growing up?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-06",
+    "text": "What family tradition do you remember most fondly?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-07",
+    "text": "What's the best vacation you took as a kid?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-08",
+    "text": "What were you like as a teenager, honestly?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-09",
+    "text": "What's a song, smell or taste that brings you straight back to childhood?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-10",
+    "text": "Who was your first best friend, and what happened to them?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-11",
+    "text": "What's something your parents did that you only appreciate now?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-12",
+    "text": "What was your first job, and what did it teach you?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-13",
+    "text": "What was your most embarrassing moment at school?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-14",
+    "text": "What's a risk you took that really paid off?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-15",
+    "text": "What's the bravest thing you've ever done?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-16",
+    "text": "Tell me about a moment you felt truly proud of yourself.",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-17",
+    "text": "What was the hardest year of your life so far, and what got you through it?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "throwback-18",
+    "text": "What did your childhood bedroom look like? Walk me through it.",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-19",
+    "text": "What's a story your family always tells about you?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-20",
+    "text": "What's the best advice you got when you were younger?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-21",
+    "text": "What was your first concert or big live event?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-22",
+    "text": "Which friend from your past do you still think about?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-23",
+    "text": "What's the best birthday you've ever had?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-24",
+    "text": "What did you believe as a kid that turned out to be completely wrong?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-25",
+    "text": "What's a moment that changed the direction of your life?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "throwback-26",
+    "text": "What's a place from your past you'd love to visit again?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-27",
+    "text": "What was the first thing you ever saved up money for?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "throwback-28",
+    "text": "When did you first feel like a grown-up?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "throwback-29",
+    "text": "What's a mistake from your past you've made peace with?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "throwback-30",
+    "text": "If you could sit down with your younger self for an hour, which age would you pick and what would you say?",
+    "category": "throwback",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-01",
+    "text": "What's something you've never told anyone but would like to share with me?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-02",
+    "text": "What do you think people misunderstand most about you?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-03",
+    "text": "When do you feel most like yourself?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-04",
+    "text": "What's a fear you've never said out loud?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-05",
+    "text": "What does a meaningful life look like to you?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-06",
+    "text": "What's something you're still trying to forgive yourself for?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-07",
+    "text": "When was the last time you cried, and why?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-08",
+    "text": "What do you need more of in your life right now?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-09",
+    "text": "What's a belief you hold that most people around you don't?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-10",
+    "text": "What part of yourself are you still learning to accept?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-11",
+    "text": "How do you know when you truly trust someone?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-12",
+    "text": "What's the kindest thing someone did for you that they probably don't remember?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-13",
+    "text": "What does \"home\" mean to you?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-14",
+    "text": "What's a question you wish people asked you more often? Answer it now.",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-15",
+    "text": "What are you most afraid of losing?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-16",
+    "text": "How have you changed in the last five years?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-17",
+    "text": "What do you want to be remembered for?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-18",
+    "text": "What does loneliness feel like for you, and what helps when it shows up?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-19",
+    "text": "What's a lesson you had to learn the hard way?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-20",
+    "text": "If you could let go of one worry forever, which one would it be?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-21",
+    "text": "What do you think your purpose is right now?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-22",
+    "text": "How do you usually handle it when you're hurt, and is that what you actually need?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-23",
+    "text": "What's something you're proud of that nobody really sees?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-24",
+    "text": "What makes you feel truly seen?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-25",
+    "text": "What's a relationship in your life you wish were different?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-26",
+    "text": "What do you believe happens after we die?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-27",
+    "text": "Is there something you're still grieving?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-28",
+    "text": "What drains your energy the most, and what fills it back up?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "deep-29",
+    "text": "What would you do differently if nobody could ever judge you?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "deep-30",
+    "text": "What does being loved feel like to you?",
+    "category": "deep",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "dreams-01",
+    "text": "Where do you see yourself in ten years if everything goes right?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-02",
+    "text": "What's a dream you gave up on, and would you ever pick it back up?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "dreams-03",
+    "text": "If money didn't matter, how would you spend your days?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-04",
+    "text": "What's one place in the world you need to see before you die?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-05",
+    "text": "What would you attempt if you knew you couldn't fail?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-06",
+    "text": "What kind of old person do you want to be?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-07",
+    "text": "What's a goal you're quietly working towards right now?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-08",
+    "text": "What does your dream home look like, down to the details?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-09",
+    "text": "What's one skill you want to have learned by this time next year?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-10",
+    "text": "If you could start a business tomorrow, what would it be?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-11",
+    "text": "What adventure should we go on together in the next year?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-12",
+    "text": "What does your perfect retirement look like?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-13",
+    "text": "What's something you want to create in your lifetime?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-14",
+    "text": "If you had the power to change one thing about the world, what would it be?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-15",
+    "text": "Which small habit do you want to build this year?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-16",
+    "text": "What's the next big chapter of your life you're excited for?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-17",
+    "text": "What does success mean to you now, compared to five years ago?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "dreams-18",
+    "text": "If you could live abroad for a year, where would you go?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-19",
+    "text": "What's something you want to experience at least once?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-20",
+    "text": "What legacy do you want to leave behind?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "dreams-21",
+    "text": "What's a fear standing between you and one of your dreams?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "dreams-22",
+    "text": "If you could describe the life you want in one word, what would it be?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-23",
+    "text": "What's a tradition you'd love to start?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "dreams-24",
+    "text": "What would a perfect year look like for you, month by month?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "dreams-25",
+    "text": "If you could master one thing by the end of your life, what would it be?",
+    "category": "dreams",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-01",
+    "text": "What's one value you'd never compromise on?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-02",
+    "text": "What makes someone a good person in your eyes?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-03",
+    "text": "Is honesty always the right choice, even when the truth might hurt?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-04",
+    "text": "What's something you think everyone should experience at least once?",
+    "category": "values",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "values-05",
+    "text": "What do you think is the secret to a happy life?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-06",
+    "text": "How do you define success?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-07",
+    "text": "What's a cause you care deeply about, and why that one?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-08",
+    "text": "What role does faith or spirituality play in your life?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-09",
+    "text": "What does loyalty mean to you?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-10",
+    "text": "Is it better to be liked or to be respected?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-11",
+    "text": "What's one thing you'd teach a child no matter what?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-12",
+    "text": "How do you decide who deserves a second chance?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-13",
+    "text": "What matters more to you: freedom or security?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-14",
+    "text": "What's a small act of kindness you think matters more than people realize?",
+    "category": "values",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "values-15",
+    "text": "How do you handle disagreements with people you care about?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-16",
+    "text": "What's something society values that you think is overrated?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-17",
+    "text": "What's something in life that's totally underrated?",
+    "category": "values",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "values-18",
+    "text": "Where do you draw the line between privacy and honesty?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-19",
+    "text": "How much should people change for the ones they love?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-20",
+    "text": "Experiences or things: what's the better way to spend money?",
+    "category": "values",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "values-21",
+    "text": "What does a healthy relationship with work look like to you?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-22",
+    "text": "What's something you believe is worth fighting for?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "values-23",
+    "text": "How do you want people to feel after spending time with you?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-24",
+    "text": "What does respect look like in everyday life?",
+    "category": "values",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "values-25",
+    "text": "When, if ever, is it okay to break a promise?",
+    "category": "values",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "us-01",
+    "text": "What was your very first impression of me?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-02",
+    "text": "When did you first realize you had feelings for me?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-03",
+    "text": "What's your favorite memory of us so far?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-04",
+    "text": "What's one thing I do that makes you feel really loved?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-05",
+    "text": "What's something small I could do more often that would mean a lot to you?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-06",
+    "text": "What's your favorite thing about our relationship?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-07",
+    "text": "How do you like to be comforted after a bad day?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-08",
+    "text": "What's something you've learned about love from being with me?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-09",
+    "text": "Which of our dates would you relive if you could?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-10",
+    "text": "What do you think is our biggest strength as a couple?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-11",
+    "text": "What's one thing we could work on together to be even better?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-12",
+    "text": "What's a tradition you'd love for us to have?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-13",
+    "text": "What does your ideal date night look like?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-14",
+    "text": "When do you feel closest to me?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-15",
+    "text": "What's something you've wanted to tell me but haven't yet?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-16",
+    "text": "What's a song that reminds you of us?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-17",
+    "text": "How do you think we've grown since we met?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-18",
+    "text": "What's one thing you'd love for us to try together?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-19",
+    "text": "What's your love language, and has it changed since we got together?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-20",
+    "text": "What moment made you think \"this is my person\"?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-21",
+    "text": "What's a habit of mine that you secretly find adorable?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-22",
+    "text": "How can I support your dreams better?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-23",
+    "text": "What does a perfect lazy day together look like?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-24",
+    "text": "What's something you want us to still be doing when we're 80?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-25",
+    "text": "What's a disagreement we had that actually made us stronger?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "us-26",
+    "text": "What are you most looking forward to in our future?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-27",
+    "text": "When I'm stressed, what do you think I need most from you?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "us-28",
+    "text": "What's the funniest moment we've shared?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-29",
+    "text": "What was going through your head on our first date?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "us-30",
+    "text": "What does commitment mean to you?",
+    "category": "us",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "friends-01",
+    "text": "How did we become friends, from your side of the story?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-02",
+    "text": "What was your first impression of me, honestly?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-03",
+    "text": "What's your favorite memory of us?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-04",
+    "text": "What's a trip we absolutely need to take together?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-05",
+    "text": "What's something you've always admired about me?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-06",
+    "text": "What's the funniest thing we've ever done together?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-07",
+    "text": "If we started a business together, what would it be and who would be the boss?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-08",
+    "text": "What do you think makes our friendship work?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-09",
+    "text": "What's something you'd want me to call you out on if I noticed it?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 3
+  },
+  {
+    "id": "friends-10",
+    "text": "When did you know we'd be good friends?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-11",
+    "text": "Pick one of our inside jokes. How would you explain it to a stranger?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-12",
+    "text": "What's one thing you'd like us to do more often?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-13",
+    "text": "What's a moment I was there for you that meant more than I probably realize?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 3
+  },
+  {
+    "id": "friends-14",
+    "text": "Which celebrity friendship is most like ours?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-15",
+    "text": "How can I be a better friend to you?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 3
+  },
+  {
+    "id": "friends-16",
+    "text": "What's a hot take you have that you've never said around me?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 1
+  },
+  {
+    "id": "friends-17",
+    "text": "What do you think we'll be doing together in 20 years?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-18",
+    "text": "What's something about you that you think I don't know yet?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 2
+  },
+  {
+    "id": "friends-19",
+    "text": "What friendship lesson took you the longest to learn?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 3
+  },
+  {
+    "id": "friends-20",
+    "text": "What's a challenge you're facing right now that I could help with?",
+    "category": "friends",
+    "mode": "friends",
+    "depth": 3
+  },
+  {
+    "id": "flirty-01",
+    "text": "What's the first thing you noticed about me physically?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "flirty-02",
+    "text": "What's something I wear that you love on me?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "flirty-03",
+    "text": "What's your favorite way to be kissed?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-04",
+    "text": "Describe your perfect romantic evening with me, in detail.",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-05",
+    "text": "Tell me about a moment you found me completely irresistible.",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-06",
+    "text": "Where's the most unexpected place you've wanted to kiss me?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-07",
+    "text": "What's something romantic you've always wanted to try with me?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-08",
+    "text": "Which compliment from me has stuck in your head the longest?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-09",
+    "text": "What's the most attractive thing about me that isn't physical?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-10",
+    "text": "What's a little gesture of mine that still gives you butterflies?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "flirty-11",
+    "text": "A whole weekend, no plans and no phones. How do you want to spend it with me?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-12",
+    "text": "What's your favorite memory of a time we couldn't keep our hands off each other?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-13",
+    "text": "What's a dream date you'd love for me to plan as a surprise?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 2
+  },
+  {
+    "id": "flirty-14",
+    "text": "What's the sweetest message I've ever sent you?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 1
+  },
+  {
+    "id": "flirty-15",
+    "text": "What makes you feel most wanted by me?",
+    "category": "flirty",
+    "mode": "couples",
+    "depth": 3
+  },
+  {
+    "id": "gratitude-01",
+    "text": "What's something you're grateful for today that you usually take for granted?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "gratitude-02",
+    "text": "Who has had the biggest positive impact on your life?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "gratitude-03",
+    "text": "What's a recent moment of pure joy you had?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "gratitude-04",
+    "text": "What's one thing you appreciate about me that you've never said out loud?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "gratitude-05",
+    "text": "What's a hard time in your life you're now thankful for?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 3
+  },
+  {
+    "id": "gratitude-06",
+    "text": "What's something about your body or health you're grateful for?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "gratitude-07",
+    "text": "What's a simple pleasure you never get tired of?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "gratitude-08",
+    "text": "Who is someone you should thank but haven't yet?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 2
+  },
+  {
+    "id": "gratitude-09",
+    "text": "What's the best thing that happened to you this year?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 1
+  },
+  {
+    "id": "gratitude-10",
+    "text": "What's something about your life right now that your younger self would be amazed by?",
+    "category": "gratitude",
+    "mode": "both",
+    "depth": 2
+  }
+]
