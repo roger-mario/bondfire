@@ -58,6 +58,8 @@ export interface PickOptions {
   categories: CategoryId[]
   /** Ids already shown in this session, never repeated within it */
   sessionSeen: Set<string>
+  /** Pick uniformly at random, ignoring votes */
+  shuffle?: boolean
   random?: () => number
 }
 
@@ -67,6 +69,7 @@ export function pickNext({
   mode,
   categories,
   sessionSeen,
+  shuffle = false,
   random = Math.random,
 }: PickOptions): Question | null {
   const allowed = new Set(categories)
@@ -74,6 +77,7 @@ export function pickNext({
     (q) => fitsMode(q, mode) && allowed.has(q.category) && !sessionSeen.has(q.id),
   )
   if (pool.length === 0) return null
+  if (shuffle) return pool[Math.floor(random() * pool.length)]
 
   const profile = buildProfile(questions, feedback)
 

@@ -66,9 +66,15 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
 
   const rotate = offset.x / 18
   // Swipe left = thumbs up, swipe right = thumbs down.
-  const likeOpacity = Math.min(1, Math.max(0, -offset.x / X_THRESHOLD))
-  const nopeOpacity = Math.min(1, Math.max(0, offset.x / X_THRESHOLD))
-  const skipOpacity = Math.min(1, Math.max(0, -offset.y / Y_THRESHOLD)) * (1 - Math.max(likeOpacity, nopeOpacity))
+  const like = Math.min(1, Math.max(0, -offset.x / X_THRESHOLD))
+  const nope = Math.min(1, Math.max(0, offset.x / X_THRESHOLD))
+  const skip = Math.min(1, Math.max(0, -offset.y / Y_THRESHOLD)) * (1 - Math.max(like, nope))
+
+  // Tapping a hint counts as a swipe; stop the card from starting a drag.
+  const tap = (dir: SwipeDir) => ({
+    onPointerDown: (e: React.PointerEvent) => e.stopPropagation(),
+    onClick: () => exit(dir),
+  })
 
   return (
     <div
@@ -83,22 +89,32 @@ export function SwipeCard({ question, onSwiped, ref }: Props) {
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerUp}
     >
-      <div className="card-top">
-        <span className="chip">
-          {cat.emoji} {cat.label}
-        </span>
-        <span className="depth" aria-label={`Depth ${question.depth} of 3`}>
-          {[1, 2, 3].map((d) => (
-            <i key={d} className={d <= question.depth ? 'on' : ''} />
-          ))}
-        </span>
-      </div>
+      <span className="chip">
+        {cat.emoji} {cat.label}
+      </span>
       <p className="card-text">{question.text}</p>
-      <div className="card-hint">Take turns answering</div>
 
-      <div className="stamp stamp-like" style={{ opacity: likeOpacity }}>👍 Like</div>
-      <div className="stamp stamp-nope" style={{ opacity: nopeOpacity }}>👎 Pass</div>
-      <div className="stamp stamp-skip" style={{ opacity: skipOpacity }}>Skip</div>
+      <div className="card-actions">
+        <button
+          className="vote"
+          aria-label="Thumbs up"
+          style={{ opacity: 0.75 + like * 0.25 - nope * 0.45, transform: `scale(${1 + like * 0.35})` }}
+          {...tap('left')}
+        >
+          👍
+        </button>
+        <span className="skip-hint" style={{ opacity: 0.5 + skip * 0.5 - Math.max(like, nope) * 0.5 }}>
+          {skip > 0.3 ? 'Skip' : '↑ skip'}
+        </span>
+        <button
+          className="vote"
+          aria-label="Thumbs down"
+          style={{ opacity: 0.75 + nope * 0.25 - like * 0.45, transform: `scale(${1 + nope * 0.35})` }}
+          {...tap('right')}
+        >
+          👎
+        </button>
+      </div>
     </div>
   )
 }
@@ -112,11 +128,9 @@ export function PeekCard({ question }: { question: Question }) {
       aria-hidden
       style={{ background: `linear-gradient(150deg, ${cat.colors[0]}, ${cat.colors[1]})` }}
     >
-      <div className="card-top">
-        <span className="chip">
-          {cat.emoji} {cat.label}
-        </span>
-      </div>
+      <span className="chip">
+        {cat.emoji} {cat.label}
+      </span>
     </div>
   )
 }

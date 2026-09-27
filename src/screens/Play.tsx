@@ -10,6 +10,7 @@ interface Props {
   feedback: FeedbackMap
   mode: Mode
   categories: CategoryId[]
+  shuffle: boolean
   updateFeedback: (fn: (prev: FeedbackMap) => FeedbackMap) => void
   onBack: () => void
   onLiked: () => void
@@ -20,25 +21,14 @@ interface HistoryEntry {
   prev: Feedback | undefined
 }
 
-const HINT_KEY = 'bondfire:hint-seen'
-
-function hintSeen() {
-  try {
-    return localStorage.getItem(HINT_KEY) === '1'
-  } catch {
-    return false
-  }
-}
-
-export function Play({ questions, feedback, mode, categories, updateFeedback, onBack, onLiked }: Props) {
+export function Play({ questions, feedback, mode, categories, shuffle, updateFeedback, onBack, onLiked }: Props) {
   // Mutable set of ids shown this session; kept stable across renders.
   const [sessionSeen] = useState(() => new Set<string>())
   const cardRef = useRef<SwipeCardHandle>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
-  const [showHint, setShowHint] = useState(() => !hintSeen())
 
   const pick = (fb: FeedbackMap) => {
-    const q = pickNext({ questions, feedback: fb, mode, categories, sessionSeen })
+    const q = pickNext({ questions, feedback: fb, mode, categories, sessionSeen, shuffle })
     if (q) sessionSeen.add(q.id)
     return q
   }
@@ -65,14 +55,6 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
     setHistory((h) => [...h.slice(-19), { question: q, prev }])
     setCount((c) => c + 1)
     setDeck({ current: deck.next, next: deck.next ? pick(nextFeedback) : null })
-    if (showHint) {
-      setShowHint(false)
-      try {
-        localStorage.setItem(HINT_KEY, '1')
-      } catch {
-        // ignore
-      }
-    }
   }
 
   const undo = () => {
@@ -106,7 +88,7 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
         <button className="icon" onClick={onBack} aria-label="Back to menu">
           ‹
         </button>
-        <span className="counter">{count > 0 ? `${count} answered` : mode === 'couples' ? '💑 Couples' : '🫶 Friends'}</span>
+        <span className="counter">{count > 0 ? `${count} answered` : `${mode === 'couples' ? '💑 Couples' : '🫶 Friends'}${shuffle ? ' · Random' : ''}`}</span>
         <button className="icon liked" onClick={onLiked} aria-label="Liked questions">
           👍 <small>{likedCount}</small>
         </button>
@@ -117,18 +99,12 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
           <>
             {deck.next && <PeekCard key={`peek-${deck.next.id}`} question={deck.next} />}
             <SwipeCard key={deck.current.id} ref={cardRef} question={deck.current} onSwiped={handleSwiped} />
-            {showHint && (
-              <div className="hint" aria-hidden>
-                <span>👍 ← swipe →  👎</span>
-                <span>swipe up to skip</span>
-              </div>
-            )}
           </>
         ) : (
           <div className="empty">
             <div className="empty-emoji">🎉</div>
             <h2>You've been through them all</h2>
-            <p>Shuffle again and your favorite kinds of questions will come up first.</p>
+            <p>{shuffle ? 'Shuffle again for a fresh random order.' : 'Shuffle again and your favorite kinds of questions will come up first.'}</p>
             <button className="primary" onClick={restart}>
               Shuffle again
             </button>
@@ -140,17 +116,8 @@ export function Play({ questions, feedback, mode, categories, updateFeedback, on
       </div>
 
       <footer className="controls">
-        <button className="ctrl small" onClick={undo} disabled={history.length === 0} aria-label="Undo">
-          ↺
-        </button>
-        <button className="ctrl like" onClick={() => cardRef.current?.swipe('left')} disabled={!deck.current} aria-label="Thumbs up">
-          👍
-        </button>
-        <button className="ctrl skip" onClick={() => cardRef.current?.swipe('up')} disabled={!deck.current} aria-label="Skip">
-          ⤼
-        </button>
-        <button className="ctrl nope" onClick={() => cardRef.current?.swipe('right')} disabled={!deck.current} aria-label="Thumbs down">
-          👎
+        <button className="link muted" onClick={undo} disabled={history.length === 0}>
+          ↺ Undo
         </button>
       </footer>
     </main>

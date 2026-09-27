@@ -20,6 +20,7 @@ const MODES: { id: Mode; label: string; emoji: string; sub: string }[] = [
 
 export function Home({ questions, feedback, settings, onChange, onStart, onLiked, onReset }: Props) {
   const { mode } = settings
+  const shuffle = !!settings.shuffle
   const cats = mode ? categoriesForMode(mode) : []
   const selected = new Set(settings.categories.filter((c) => cats.some((x) => x.id === c)))
   const likedCount = Object.values(feedback).filter((f) => f.vote === 'up').length
@@ -31,11 +32,11 @@ export function Home({ questions, feedback, settings, onChange, onStart, onLiked
     const next = new Set(selected)
     if (next.has(id)) next.delete(id)
     else next.add(id)
-    onChange({ ...settings, categories: [...next] })
+    onChange({ ...settings, shuffle: false, categories: [...next] })
   }
 
   const available = mode
-    ? questions.filter((q) => fitsMode(q, mode) && selected.has(q.category)).length
+    ? questions.filter((q) => fitsMode(q, mode) && (shuffle || selected.has(q.category))).length
     : 0
 
   return (
@@ -73,21 +74,33 @@ export function Home({ questions, feedback, settings, onChange, onStart, onLiked
               onClick={() =>
                 onChange({
                   ...settings,
-                  categories: selected.size === cats.length ? [] : cats.map((c) => c.id),
+                  shuffle: false,
+                  categories: !shuffle && selected.size === cats.length ? [] : cats.map((c) => c.id),
                 })
               }
             >
-              {selected.size === cats.length ? 'Clear all' : 'Select all'}
+              {!shuffle && selected.size === cats.length ? 'Clear all' : 'Select all'}
             </button>
           </div>
-          <div className="cats">
+          <button
+            className={`cat random ${shuffle ? 'active' : ''}`}
+            onClick={() => onChange({ ...settings, shuffle: !shuffle })}
+            aria-pressed={shuffle}
+          >
+            <span className="cat-emoji">🔀</span>
+            <span className="cat-text">
+              <span className="cat-label">Random</span>
+              <span className="cat-blurb">Every category, fully shuffled</span>
+            </span>
+          </button>
+          <div className={`cats ${shuffle ? 'dimmed' : ''}`}>
             {cats.map((c) => (
               <button
                 key={c.id}
-                className={`cat ${selected.has(c.id) ? 'active' : ''}`}
+                className={`cat ${!shuffle && selected.has(c.id) ? 'active' : ''}`}
                 onClick={() => toggle(c.id)}
-                aria-pressed={selected.has(c.id)}
-                style={selected.has(c.id) ? { background: `linear-gradient(135deg, ${c.colors[0]}, ${c.colors[1]})` } : undefined}
+                aria-pressed={!shuffle && selected.has(c.id)}
+                style={!shuffle && selected.has(c.id) ? { background: `linear-gradient(135deg, ${c.colors[0]}, ${c.colors[1]})` } : undefined}
               >
                 <span className="cat-emoji">{c.emoji}</span>
                 <span className="cat-text">

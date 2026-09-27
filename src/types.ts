@@ -28,4 +28,6 @@ export interface Feedback {
 export interface Settings {
   mode: Mode | null
   categories: CategoryId[]
+  /** Random mode: every category, fully shuffled, no ranking */
+  shuffle?: boolean
 }

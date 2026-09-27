@@ -2,10 +2,12 @@
 
 A phone-first web app with conversation questions for couples and friends. Pick who's playing and which categories you're in the mood for, then swipe through question cards:
 
-- **Swipe left / 👍**: more like this
-- **Swipe right / 👎**: less like this
-- **Swipe up / ⤼**: skip without voting
-- **↺**: undo the last swipe
+- **Swipe left** (or tap 👍 on the card): more like this
+- **Swipe right** (or tap 👎 on the card): less like this
+- **Swipe up**: skip without voting
+- **Undo**: bring back the last card
+
+Pick **Random** to get questions from every category in a fully shuffled order, without the recommendations.
 
 Every thumbs up or down teaches the app what you enjoy, and the next cards are picked to match your taste.
 

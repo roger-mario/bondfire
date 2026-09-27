@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react'
 import questionsData from './data/questions.json'
+import { categoriesForMode } from './data/categories'
 import { Home } from './screens/Home'
 import { Play } from './screens/Play'
 import { Liked } from './screens/Liked'
@@ -49,7 +50,8 @@ export default function App() {
         questions={QUESTIONS}
         feedback={feedback}
         mode={settings.mode}
-        categories={settings.categories}
+        categories={settings.shuffle ? categoriesForMode(settings.mode).map((c) => c.id) : settings.categories}
+        shuffle={!!settings.shuffle}
         updateFeedback={updateFeedback}
         onBack={() => setScreen('home')}
         onLiked={() => setScreen('liked')}
